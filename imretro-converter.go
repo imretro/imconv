@@ -4,7 +4,15 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"image"
+	"image/gif"
+	"image/jpeg"
+	"image/png"
 	"os"
+	"path/filepath"
+	"strings"
+
+	imretro "github.com/imretro/go"
 )
 
 var help bool
@@ -23,6 +31,39 @@ func main() {
 		exitOnError(errors.New("source not defined"))
 	} else if dest == "" {
 		exitOnError(errors.New("dest not defined"))
+	}
+
+	sourceFile, err := os.Open(source)
+	if err != nil {
+		exitOnError(err)
+	}
+	defer sourceFile.Close()
+
+	sourceImage, _, err := image.Decode(sourceFile)
+	if err != nil {
+		exitOnError(err)
+	}
+
+	destFile, err := os.Create(dest)
+	if err != nil {
+		exitOnError(err)
+	}
+	defer destFile.Close()
+
+	switch ext := strings.ToLower(filepath.Ext(dest)); ext {
+	case ".gif":
+		err = gif.Encode(destFile, sourceImage, nil)
+	case ".imretro":
+		err = imretro.Encode(destFile, sourceImage, imretro.EightBit)
+	case ".jpg", ".jpeg":
+		err = jpeg.Encode(destFile, sourceImage, nil)
+	case ".png":
+		err = png.Encode(destFile, sourceImage)
+	default:
+		err = fmt.Errorf("Unsupported image format: %v", ext)
+	}
+	if err != nil {
+		exitOnError(err)
 	}
 }
 
