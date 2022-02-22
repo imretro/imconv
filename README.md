@@ -1,6 +1,6 @@
 # `imconv`
 
-Converts images to and from various formats (including the imretro format as a bonus).
+Simple tool to convert images to and from various formats (including the imretro format as a bonus).
 
 ## Usage
 
