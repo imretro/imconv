@@ -1,5 +1,5 @@
-github.com/imretro/go v1.0.2 h1:x8/qHtld+zK7wOeg1tAV6ZtRyP/Bdw7H07BF+V0y9s0=
-github.com/imretro/go v1.0.2/go.mod h1:Qysn5JslKkpnLLPnvzJtO+kATSYFGdB676JUEWbVMRs=
+github.com/imretro/go v1.0.4 h1:nLA+jScY+zxHM/eaVjmFcM+bg+tbNWhJbnk3ib5D3dg=
+github.com/imretro/go v1.0.4/go.mod h1:Qysn5JslKkpnLLPnvzJtO+kATSYFGdB676JUEWbVMRs=
 github.com/spenserblack/go-bitio v1.3.0 h1:O2k3s9FMAgMSLTTdDk2B/+Jh+lFLE+qgXjXxKp41/z8=
 github.com/spenserblack/go-bitio v1.3.0/go.mod h1:kfwkTPB8ar/aBrUBXcyQPb4LoFhEC6nd/xGTTia4GCE=
 github.com/spenserblack/go-byteutils v1.1.1 h1:oitIPt7vVVEQw0bIVdLq9xsjCVlYTrpLJDEeTZGcquQ=
