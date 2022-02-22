@@ -1,4 +1,4 @@
-module github.com/imretro/converter
+module github.com/imretro/imconv
 
 go 1.16
 

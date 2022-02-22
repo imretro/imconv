@@ -72,7 +72,7 @@ func init() {
 }
 
 func printHelp() {
-	fmt.Fprintf(os.Stderr, "usage: imretro-converter [FLAGS] <source> <dest>\n\nFLAGS:\n")
+	fmt.Fprintf(os.Stderr, "usage: imconv [FLAGS] <source> <dest>\n\nFLAGS:\n")
 	flag.PrintDefaults()
 }
 
